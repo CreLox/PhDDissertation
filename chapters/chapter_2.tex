@@ -1,13 +1,21 @@
 \chapter{Ectopic Activation of the Spindle Assembly Checkpoint Signaling Cascade Reveals Its Biochemical Design}
 \label{chpt:2}
 
+\section{Building a semi-automatic data analysis pipeline to enable the processing of a large volume of data}
+For mitotic duration assays requiring live-cell time-lapse imaging, we utilized a semi-automatic pipeline [implemented in MATLAB (MathWorks)] to facilitate data analysis \myref{DataAnalysisPipeline}. Images of fluorescence channel(s) were first pre-processed to remove backgrounds and corrected for shading. The background was obtained from a blank well containing only the imaging media. The shading pattern was calculated from a blank well containing the imaging media supplied with the corresponding purified fluorescence protein. Due to the lack of precise mechanical control of stage positioning on the IncuCyte\textsuperscript{\textregistered} ZOOM System (Sartorius) [but not so much on the ImageXpress\textsuperscript{\textregistered} Nano Automated Imaging System (Molecular Devices)], there is non-negligible jittering over time. Images of the phase-contrast transmitted light channel were registered (aligned) with the preceding image in the stack recursively (except for the first frame). The computed translations were then propagated to the processed fluorescence image stack(s).
 
+Adherent mammalian cells typically assume a spherical shape from NEBD (nuclear envelop breakdown) to anaphase onset, while G\textsubscript{1}/S/G\textsubscript{2}/prophase cells usually assume a flattened shape on a plate. In slightly defocused phase-contrast transmitted light images, these cells appear as circles defined by high-contrast halo/shade-off imaging artifacts. Our semi-automatic pipeline utilized this to detect mitotic cells by convolving each image with kernels representing ``average'' mitotic cells (constructed by 2-D averaging of micrographs of manually picked mitotic cells). A threshold is then applied to the correlation matrix to convert it into a binary matrix. Connected components of high-correlation pixels (above a certain threshold of the pixel size) are recognized as mitotic cells. Centroids of these connected components were linked across successive frames to connect all frames of the same cell across the entire history from NEBD to anaphase onset (hereby defined as an ``event''). These events were then presented to the user in a graphical user interface (GUI), where the user can manually examine them carefully to either abandon a false event or to correct the frame index of NEBD/anaphase onset if necessary. The duration of mitosis is then calculated and corresponding $(x, y, t)$ coordinates are propagated to the fluorescence channel(s) to measure the fluorescence signal(s) of the cell.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{chapters/figures/DataAnalysisPipeline.pdf}
+    \caption{\textbf{A diagram illustrating the semi-automatic data analysis pipeline for mitotic duration assays.}}
+    \label{DataAnalysisPipeline}
+\end{figure}
 
 \section{The distance between MELT motifs has a minor impact on the SAC activity}
 \label{sec:examplesec3}
-There are two major differences between the M1, M3, and M6 (M3-M3) eSAC constructs in the previous section: (1) that the total number of MELT motifs in the signaling scaffold are different and (2) the lengths of these signaling scaffolds are different. Even though the phosphodomain of \protein{Knl1} is largely unstructured and flexible,
-% need cite/citation/reference?
-it remains to be seen whether the distance between MELT motifs affects the SAC activity. As a reference, the pair-wise distance between neighboring MELT motifs in the endogenous \protein{Knl1} are illustrated in \myref{PairwiseDistancesBetweenNeighboringMELTs}.
+There are two major differences between the M1, M3, and M6 (M3-M3) eSAC constructs in the previous section: (1) that the total number of MELT motifs in the signaling scaffold are different and (2) the lengths of these signaling scaffolds are different. Even though the phosphodomain of \protein{Knl1} is largely unstructured and flexible \cite{UnstructuredKNL1}, it remains to be seen whether the distance between MELT motifs affects the SAC activity. As a reference, the pair-wise distance between neighboring MELT motifs in the endogenous \protein{Knl1} are illustrated in \myref{PairwiseDistancesBetweenNeighboringMELTs}.
 
 \begin{figure}
     \centering
@@ -29,9 +37,6 @@ To study the effect of the distance between MELT motifs in the signaling scaffol
 
 
 \section{Materials and Methods}
-\subsection{Semi-automatic data analysis pipeline}
-Shading Correction
-
 \subsection{Protein purification of recombinant \protein{Mps1} kinase domain from Sf9 cells}
 The recombinant bacmid was generated from pCCB15 via Bac-to-Bac\textsuperscript{\textregistered} (Thermo Fisher Scientific). Baculovirus-transfected Sf9 cells (from \SI{1}{L} of culture) were pelleted down and stored at \SI{-80}{\celsius} until protein purification. Cells were resuspended in buffer IA [\SI{50}{mM} Tris-HCl (pH 7.5), \SI{300}{mM} NaCl, 0.2\% Triton X-100, \SI{20}{mM} imidazole, 0.1\% \textbeta-mercaptoethanol, and supplemented with PMSF and cOmplete\texttrademark{} EDTA-free Protease Inhibitor Cocktail (Roche) before usage] to a total volume of \SI{60}{mL}. Cells were lysed by a Dounce homogenizer (20 strokes using the loose pestle followed by 1 stroke using the tight pestle) supplied with Benzonase\textsuperscript{\textregistered} Nuclease (Sigma-Aldrich). Cell lysates were then centrifuged at \SI{18000}{rpm}, \SI{4}{\celsius} for \SI{45}{min} in a F21S-8x50y rotor. The supernatant was transferred and the pellet was discarded. \SI{5}{mL} of Ni-NTA agarose (equilibrated with buffer IA; Thermo Fisher Scientific) was added into the supernatant and the mixture was rotated at \SI{4}{\celsius} for \SI{3.5}{h}. The slurry was then washed with \SI{5}{mL} of buffer IA for 4 times. Bound proteins were eluted with buffer IB [\SI{50}{mM} Tris-HCl (pH 7.5), \SI{300}{mM} NaCl, 0.2\% Triton X-100, \SI{200}{mM} imidazole, 0.1\% \textbeta-mercaptoethanol].
 
