@@ -159,6 +159,8 @@
 
 % Compress multiple citations
 \RequirePackage{natbib}
+%\usepackage[backend=biber,sortcites,sorting=none,uniquename=false]{biblatex}
+%\addbibresource{references.bib}
 
 % This package allows the ability to create a 'code' environment.
 \RequirePackage{verbatim}
