@@ -31,3 +31,27 @@ To study the quantitative relationship between the strength of the SAC signaling
 These polar chromosomes typically possess one kinetochore that is unattached or laterally attached to spindle microtubules, both of which activate the SAC in mammalian cells \cite{GSK923295MonastrolCotreatment,GSK923295LateralAttachmentEM,LateralAttachmentSAC}.
 % Monastrol co-treatment may have created the bias towards unattachment instead of lateral attachment.
 Nocodazole affects the dynamics of microtubules and distorts spindles at \SI{330}{nM} in human cells \cite{TypeIIISpindle_330nMNoc, RPE1+Noc}, turning on SAC signaling at almost all kinetochores based on the recruitment of SAC proteins (see below). We applied various fluorescence microscopy and spectroscopy techniques to quantify SAC proteins and their influence on the SAC in live cells \cite{My2019Paper}. % Small numbers of signaling kinetochores and relative enrichment of SAC proteins on them.
+
+\begin{table}[H]
+    \renewcommand{\arraystretch}{2}
+    \caption{\textbf{The length of the exon encoding all MELT motifs in some mammals and its ranking among all curated internal exons in human and mouse.}}
+    \noindent\justifying Sequences of MELT motifs were referred from \cite{MELTEvolution}. We verified that all MELT motifs reside within a single exon in all listed mammals and all identified alternative splice variants contain this exon. Coordinates of exons (of mouse and human) in the Consensus CDS Database were accessed on May 21, 2020. Exons from coding sequences with either a ``Public'' or a ``Reviewed, update pending'' status were pooled. Various coding sequences may share a common exon, which is hence recorded more than once in the database. Therefore, redundant entries were detected and removed. Exons were then sorted by length and the ranking of the MELT motif-encoding exon was calculated. Because there is no data for untranslated regions in the database, only internal exons were included in the analysis. However, it should be noted that the maximum length of an exon is restricted by the length of the encoded protein, and \protein{KNL1} is a long protein of \SI{2342}{} amino acids (the canonical isoform).
+    \label{ExonLength}
+    \begin{center}
+        \begin{tabular}{c c c}
+            \hline
+            Species & Exon length (bases) & Ranking among all curated internal exons\\
+            \hline
+            Human & 5001* & $99.973\%$\\
+            Mouse & 4497 & $99.975\%$\\
+            Rat & 3439 & N/A\\
+            Cattle & 4020 & N/A\\
+            Elephant & 4023 & N/A\\ % What kind of elephant?
+            Giant panda & 4017 & N/A\\
+            Dog & 3837 & N/A\\
+            Bonobo & 3927 & N/A\\
+            \hline
+        \end{tabular}
+    \end{center}
+    \footnotesize{*According to UniProtKB, this exon is about 166 bases shorter in one non-canonical isoform. This exon still includes all 19 putative MELT motifs.}
+\end{table}
