@@ -1,0 +1,14 @@
+\section{Cooperativity}
+
+Originally, ``cooperativity'' was used to described the binding of oxygen molecules to the subunits of hemoglobin in the Koshland-N{\'e}methy-Filmer sequential model \cite{KNF} or the Monod-Wyman-Changeux symmetry model \cite{MWC}. However, throughout my thesis, the term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'' because negative cooperativity is not mentioned or discussed) is not limited to cooperative binding but rather describes phenomenological cooperation or synergy in general. Just like effective collaborations between people in the society, cooperativity between biochemical events may amplify the output (or at least not dampen the difference in the inputs due to the concave nature of the Langmuir adsorption equation and the Michaelis-Menten kinetics) \cite{CooperativityQA}. In fact, suppose the output $f(x) \geq 0$ is a strictly concave function of the input $x$ for all $x \geq 0$ and the output is 0 if and only if the input is 0. Comparing the outputs corresponding to the inputs $x_2 > x_1 > 0$, we have
+
+\begin{equation*}
+    \dfrac{f(x_2)}{f(x_1)} = \dfrac{f(x_2)}{f[\dfrac{x_1}{x_2} \cdot x_2 + (1-\dfrac{x_1}{x_2}) \cdot 0]} < \dfrac{f(x_2)}{\dfrac{x_1}{x_2}f(x_2) + (1-\dfrac{x_1}{x_2})f(0)} = \dfrac{f(x_2)}{\dfrac{x_1}{x_2}f(x_2)} = \dfrac{x_2}{x_1},
+\end{equation*}
+
+which explains the dampening effect.
+
+Some of the well characterized examples of cooperativity includes avidity, ...
+% , which may be fundamental to the sensitivity of the SAC
+% Other biological decision-making processes that deploy cooperativity?
+% zero-order ultra-sensitivity (multistep MPS1 phosphorylation?), discovered by Goldbeter and Koshland in the course of theoretical studies of signaling cascades, and inhibitor ultrasensitivity, a simple stoichiometric buffering reaction. 
