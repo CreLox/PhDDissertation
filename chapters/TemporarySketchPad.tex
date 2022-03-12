@@ -1,14 +1,29 @@
-\section{Cooperativity}
+\section{Mitosis, spindle, and the kinetochore-microtubule attachment in human cells}
 
-Originally, ``cooperativity'' was used to described the binding of oxygen molecules to the subunits of hemoglobin in the Koshland-N{\'e}methy-Filmer sequential model \cite{KNF} or the Monod-Wyman-Changeux symmetry model \cite{MWC}. However, throughout my thesis, the term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'' because negative cooperativity is not mentioned or discussed) is not limited to cooperative binding but rather describes phenomenological cooperation or synergy in general. Just like effective collaborations between people in the society, cooperativity between biochemical events may amplify the output (or at least not dampen the difference in the inputs due to the concave nature of the Langmuir adsorption equation and the Michaelis-Menten kinetics) \cite{CooperativityQA}. In fact, suppose the output $f(x) \geq 0$ is a strictly concave function of the input $x$ for all $x \geq 0$ and the output is 0 if and only if the input is 0. Comparing the outputs corresponding to the inputs $x_2 > x_1 > 0$, we have
+% somatic cell division (mitosis)
 
-\begin{equation*}
-    \dfrac{f(x_2)}{f(x_1)} = \dfrac{f(x_2)}{f[\dfrac{x_1}{x_2} \cdot x_2 + (1-\dfrac{x_1}{x_2}) \cdot 0]} < \dfrac{f(x_2)}{\dfrac{x_1}{x_2}f(x_2) + (1-\dfrac{x_1}{x_2})f(0)} = \dfrac{f(x_2)}{\dfrac{x_1}{x_2}f(x_2)} = \dfrac{x_2}{x_1},
-\end{equation*}
+%  Over the course of prometaphase, the number of unattached kinetochores decreases from 92 to 0 in human cells.
 
-which explains the dampening effect.
+% To prepare for the equal distribution of chromosomes, the dividing cell forms the spindle which attaches from opposite poles of the cell to all chromosomes through adaptor structures named kinetochores. Unattached kinetochores activate the SAC through a series of biochemical reactions.  First, unattached kinetochores recruit the kinase MPS1 which phosphorylates multiple consensus sites named MELT motifs on the scaffold protein KNL1. Phosphorylated MELT motifs will then recruit a series of SAC proteins and eventually generate a diffusible inhibitory signaling molecule known as the Mitotic Checkpoint Complex (MCC) which blocks the progression of cell division. This block allows time for the spindle to find the loose kinetochores. Once all attachment is secured, the SAC will inactivate and the block will be released. The spindle will then pull the two sets of chromosomes towards opposite poles, which later become parts of the two daughter cells.
 
-Some of the well characterized examples of cooperativity includes avidity, ...
-% , which may be fundamental to the sensitivity of the SAC
-% Other biological decision-making processes that deploy cooperativity?
-% zero-order ultra-sensitivity (multistep MPS1 phosphorylation?), discovered by Goldbeter and Koshland in the course of theoretical studies of signaling cascades, and inhibitor ultrasensitivity, a simple stoichiometric buffering reaction. 
+% different modes of attachment
+
+\section{The SAC signaling in human cells: the core pathway \Latin{versus} the RZZS pathway}
+
+% Figure: KNL1 19 putative MELT motifs & Biochemical event scheme of SAC
+
+The spindle assembly checkpoint (SAC) is a signaling pathway in mitosis that delays anaphase onset in the presence of kinetochores lacking end-on attachment to spindle microtubules \cite{LateralAttachmentSAC}. The SAC can be activated by a single unattached kinetochore, but the strength of the signaling output (as commonly quantified by the duration from the nuclear envelope breakdown to the anaphase onset or mitotic slippage) increases with the number of signaling kinetochores in mammalian cells \cite{RiederNormalProgression,Rheostat,Ablation}. How the number of signaling kinetochores changes the strength of the signaling output is not fully understood. This knowledge will help us comprehend how the SAC prevents premature anaphase onset in the presence of a decreasing number of signaling kinetochores from the nuclear envelope breakdown to the metaphase during normal mitotic progression.
+
+The SAC in mammalian cells relies on the kinetochore-localized signaling scaffold \protein{Knl1} as well as the corona, a crescent-shaped fibrous structure near kinetochores without end-on attachment to spindle microtubules \cite{GSK923295LateralAttachmentEM,CoronaActivatesSAC}. \protein{Knl1} possesses multiple MELT motifs \cite{MELTEvolution}, which are phosphorylated at unattached kinetochores and dephosphorylated at kinetochores with end-on attachment to spindle microtubules. Phosphorylated MELT motifs recruit SAC proteins like \protein{BubR1}, \protein{Bub1}, and \protein{Mad1}, promoting the formation of the mitotic checkpoint complex. The mitotic checkpoint complex inhibits the ubiquitin ligase anaphase promoting complex/cyclosome (APC/C), which ubiquinates the key mitosis regulator Cyclin B1 and targets it to proteasome-mediated degradation. In addition to the \protein{Knl1} pathway, the corona also recruits \protein{Mad1} and contributes to the spindle assembly checkpoint signaling output.
+
+The \protein{Knl1} and the corona machinery also contribute to mitotic progression by facilitating chromosome congression. \protein{Knl1}-recruited \protein{BubR1} binds to the phosphatase \protein{PP2A-B56}, which stabilizes the kinetochore-microtubule attachment. The corona recruits the centromere-associated kinesin \protein{Cenp-E}, which promotes end-on attachment to spindle microtubules. This chromosome congression-promoting function complicates the quantitative study of the SAC signaling output in live cells.
+
+An unattached kinetochore activates the SAC by allowing Mps1 kinase to phosphorylate KNL1 at sites known as MELT motifs due to their consensus sequence (Figures 1B and 1C) [7–10]. This event is followed by the sequential recruitment of Bub3-Bub1 and Mad1-Mad2, along with Bub3-BubR1 and Cdc20 to the kinetochore, with Mps1 phosphorylation playing a licensing role for each step (Figure 1B) [2, 11–19]. We refer to this biochemical cascade as the ‘‘core SAC signaling cascade’’ (dashed gray box in Figure 1B).
+
+In metazoa, the core SAC signaling cascade is complemented by the RZZS pathway, which contributes to the recruitment of Mad1-Mad2 to signaling kinetochores [20].
+
+Ultimately, Bub3, BubR1, Mad2, and Cdc20 form the MCC, which then disperses throughout the cellular volume to inhibit APC/C. The MCC inhibits the Anaphase-Promoting Complex/Cyclosome (APC/C) to delay anaphase onset (Izawa and Pines, 2015; Sudakin et al., 2001). This delay enables the unattached kinetochores to attach to spindle microtubules and thereby ensures accurate chromosome segregation.
+
+The corona assembles on mitotic kinetochores to promote microtubule capture and SAC signaling.
+
+Other constituents of the corona include \protein{Cenp-E} and \protein{Cenp-F}, which interact with \protein{BubR1} and \protein{Bub1}, respectively \cite{CENPELocalization-BUBR1, CENP-FLimitsStripping}.

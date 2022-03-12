@@ -590,7 +590,9 @@
    % Make a minipage.
    %\begin{minipage}{#4\textwidth} %
     % Set paragraphs to be indented
-    \setlength{\parindent}{15pt}
+    %\setlength{\parindent}{15pt}
+    \setlength{\parindent}{0em}
+    \setlength{\parskip}{0.5em}
     % Required to use 1.5-spacing for dissertation.
     \if@umich@thesis %
      \onehalfspacing %
