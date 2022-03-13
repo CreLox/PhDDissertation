@@ -15,7 +15,7 @@
     \label{SACRole}
 \end{figure}
 
-\section{The arrangement of putative MELT motifs in human \protein{Knl1}}
+\section{MELT motifs and their arrangement in human \protein{Knl1}}
 
 Alternative splicing is common in intrinsically disordered regions mediating protein-protein interactions \cite{DisorderedRegionsAlternativeSplicing}. However, in many mammals, all of Knl1's MELT motifs within a single exon which is one of the longest internal exons in these mammals (\myref{ExonLength}). No alternatively splicing has been recorded for this region. The splicing machinery has to deploy specific mechanisms to splice long exons like this correctly \cite{InternalExon}.
 
@@ -42,10 +42,12 @@ Alternative splicing is common in intrinsically disordered regions mediating pro
     \end{center}
 \end{table}
 
-% \section{The sensitivity and responsiveness of the SAC}
+\section{The sensitivity and responsiveness of the SAC}
+
 % Just like one will not completely understand how a machine works just by knowing all the gears involved, we cannot claim to have completely comprehended how the SAC works by just knowing all associated biochemical reactions individually.
 % the sensitivity of the SAC
 % responsiveness (releasing the block promptly once all attachment is secured)
+% How the number of signaling kinetochores changes the strength of the signaling output is not fully understood. This knowledge will help us comprehend how the SAC prevents premature anaphase onset in the presence of a decreasing number of signaling kinetochores from the nuclear envelope breakdown to the metaphase during normal mitotic progression.
 
 \section{Cooperativity and ultrasensitivity}
 
@@ -57,9 +59,9 @@ Originally, ``cooperativity'' was used to described the binding of oxygen molecu
 
 \noindent which states that the contrast between the outputs is less than the contrast between the inputs \cite{InhibitorUltrasensitivity}. Due to the wide applicability of the Langmuir adsorption equation or the Michaelis-Menten kinetics in biochemical interactions or reactions, the dampening effect may actually be very common.
 
-There are many well-studied mechanisms (including cooperativity) deployed by signaling cascades exhibiting a switch-like sigmoidal dose-response relationship (ultrasensitivity) to circumvent the dampening effect. Regarding the SAC signaling, certain mechanisms (like the cascade amplification mechanism; see \myref{SACRole}) may be excluded based on our current understanding of mitosis and the biochemical pathway of the SAC, while the multi-step/multi-site phosphorylation mechanism has been implied in the SAC by experimental evidence \cite{MultistepUltrasensitivity, Ji2017eLife}. My thesis will focus on the implied role of cooperativity in the SAC signaling. The term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'') describes the phenomenological synergy which I attribute to increased local concentration of SAC proteins due to their co-localization on the same signaling scaffold (see my models in \myref{ProzoneEffectModel,FinalKnittingModel}. This is reminiscent of the theoretical explanation of the avidity between antibodies and antigens \cite{AvidityMath}, another well-characterized example of cooperativity.
+There are many well-studied mechanisms (including cooperativity) deployed by signaling cascades exhibiting a switch-like sigmoidal dose-response relationship (ultrasensitivity) to circumvent the dampening effect. Regarding the SAC signaling, certain mechanisms (like the cascade amplification mechanism; see \myref{SACRole}) may be excluded based on our current understanding of mitosis and the biochemical pathway of the SAC, while the multi-step/multi-site phosphorylation mechanism has been implied in the SAC by experimental evidence \cite{MultistepUltrasensitivity, Ji2017eLife} (see the magenta arrows and texts in \myref{CoreSAC}). My thesis will focus on the implied role of cooperativity in the SAC signaling. The term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'') describes the phenomenological synergy which I attribute to increased local concentration of SAC proteins due to their co-localization on the same signaling scaffold (see my models in \myref{ProzoneEffectModel,FinalKnittingModel}. This is reminiscent of the theoretical explanation of the avidity between antibodies and antigens \cite{AvidityMath}, another well-characterized example of cooperativity.
 
-% Challenges
+\section{Methods of studying the SAC quantitatively \Latin{in vivo} and technical challenges}
 % The understanding of the entire picture is hindered by multiple difficulties. First, the biochemical reactions that lead to MCC formation are spatially localized within the nanoscale volume of a kinetochore. Second, the concentrations of many SAC proteins are tightly regulated and may be influenced by each other. Third, that the biochemical cascade involves complex parallel recruitment pathways of certain SAC proteins and regulating kinases/phosphatases. 
 
 %To study the quantitative relationship between the strength of the SAC signaling and the number of signaling kinetochores/the amount of SAC proteins localized to signaling kinetochores, The SAC was then activated by treating the cells with either GSK923295 or a high dosage of nocodazole. GSK923295 inhibits the ATPase activity of \protein{Cenp-E}, thereby disrupting chromosome congression and yielding small numbers of chromosomes near spindle poles in mammalian cells \cite{GSK923295}.
@@ -67,3 +69,5 @@ There are many well-studied mechanisms (including cooperativity) deployed by sig
 %These polar chromosomes typically possess one kinetochore that is unattached or laterally attached to spindle microtubules, both of which activate the SAC in mammalian cells \cite{GSK923295MonastrolCotreatment,GSK923295LateralAttachmentEM,LateralAttachmentSAC}.
 % Monastrol co-treatment may have created the bias towards unattachment instead of lateral attachment.
 %Nocodazole affects the dynamics of microtubules and distorts spindles at \SI{330}{nM} in human cells \cite{TypeIIISpindle_330nMNoc, RPE1+Noc}, turning on SAC signaling at almost all kinetochores based on the recruitment of SAC proteins (see below). We applied various fluorescence microscopy and spectroscopy techniques to quantify SAC proteins and their influence on the SAC in live cells \cite{eSAC}. % Small numbers of signaling kinetochores and relative enrichment of SAC proteins on them.
+
+%This chromosome congression-promoting function complicates the quantitative study of the SAC signaling output in live cells.
