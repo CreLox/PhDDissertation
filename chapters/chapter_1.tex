@@ -1,25 +1,25 @@
 \chapter{Introduction}
 \label{chpt:introduction}
 
-%  How the SAC blocks the progression of mitosis in the presence of a single unattached kinetochore and releases the block promptly once all attachment is secured remains unclear. Here, I summarize our discovery that the SAC, like many other biochemical switches, exploits cooperativity to achieve such sensitivity. Furthermore, I look into potential molecular mechanisms of this cooperativity.
+% Accurate chromosome segregation during cell division requires that the sister kinetochores on each replicated chromosome are stably attached to microtubules emanating from opposite spindle poles before the cell divides. If one or more kinetochores fail to attach to microtubules, they activate a biochemical signaling cascade known as the spindle assembly checkpoint (SAC). This cascade produces an anaphase-inhibitory signal known as the ‘‘mitotic checkpoint complex’’ (MCC). MCC inhibits the anaphase promoting complex/cyclosome (APC/C) to prevent the cell from transitioning from prometaphase to anaphase, thus avoiding chromosome mis-segregation.
 
-% Unattached kinetochores catalyze MCC formation by recruiting SAC proteins in a well-defined signaling cascade (Fig. 1A) (Faesen et al., 2017; Ji et al., 2017; Lara-Gonzalez et al., 2021a; London and Biggins, 2014; London et al., 2012; Piano et al., 2021; Primorac et al., 2013; Shepperd et al., 2012). This cascade is activated when the kinetochore protein Knl1 is phosphorylated by the Mps1 kinase at the ‘MELT’ motifs, so called because of their consensus amino acid sequence in humans and other eukaryotes (Primorac et al., 2013; Tromer et al., 2015; Vleugel et al., 2013). Each MELT motif serves as the scaffold for recruiting downstream signaling proteins (Chen et al., 2019; Primorac et al., 2013).
+% How the SAC blocks the progression of mitosis in the presence of a single unattached kinetochore and releases the block promptly once all attachment is secured remains unclear. Here, I summarize our discovery that the SAC, like many other biochemical switches, exploits cooperativity to achieve such sensitivity. Furthermore, I look into potential molecular mechanisms of this cooperativity.
 
-% Accurate chromosome segregation during cell division requires that the sister kinetochores on each replicated chromosome are stably attached to microtubules emanating from opposite spindle poles before the cell divides. If one or more kinetochores fail to attach to microtubules, they activate a biochemical signaling cascade known as the spindle assembly checkpoint (SAC). This cascade produces an anaphase-inhibitory signal known as the ‘‘mitotic checkpoint complex’’ (MCC). MCC in- hibits the anaphase promoting complex/cyclosome (APC/C) to prevent the cell from transitioning from prometaphase to anaphase, thus avoiding chromosome mis-segregation [2].
+\section{Mitosis, spindle, and the kinetochore-spindle microtubule attachment in human cells}
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{chapters/figures/SACRole.pdf}
-    \caption{\textbf{The role and properties of the SAC.}}
-    \noindent\justifying The sensitivity of the SAC is unlikely to be facilitated by an enzymatic amplification cascade, given our current understanding of the biochemical pathway of the SAC \cite{InhibitorUltrasensitivity, Caspase}. Transcriptional regulations that amplify signals via the central dogma and the potential oligomerization of the involved transcriptional factors \cite{TFMultimerization} are also unlikely because the genome is highly condensed in the chromosome during mitosis.
+    \caption{\textbf{The gradual establishment of kinetochore-spindle microtubule attachment and the role of the SAC in ensuring equal chromosome segregation.}}
+    \noindent\justifying Kinetochores without end-on microtubule attachment activate the spindle assembly checkpoint (SAC) to prevent premature anaphase onset. The sensitivity of the SAC is unlikely to be facilitated by an enzymatic amplification cascade, given our current understanding of the biochemical pathway of the SAC \cite{InhibitorUltrasensitivity, Caspase}. Transcriptional regulations that amplify signals via the central dogma and potential oligomerization of the involved transcriptional factors \cite{TFMultimerization} are also unlikely because the genome is highly condensed in the chromosome during the prometaphase.
     \label{SACRole}
 \end{figure}
 
 \section{The spindle assembly checkpoint (SAC) signaling in human cells: the core pathway and the corona pathway}
 
-Kinetochores without end-on microtubule attachment activate the SAC to block the progression of mitosis (more specifically, the onset of anaphase) \cite{GSK923295MonastrolCotreatment, GSK923295LateralAttachmentEM, LateralAttachmentSAC}. This block allows time for the establishment of the end-on kinetochore-microtubule attachment. Once all attachment is secured, the SAC is silenced and the block is lifted \cite{SACActivationAndSilencing}. The mitosis is completed with equal segregation of chromosomes into daughter cells.
+Cells deploy the spindle assembly checkpoint (SAC) to monitor the progress of the establishment of the kinetochore-microtubule attachment. The SAC is activated at kinetochores without end-on microtubule attachment to block premature anaphase onset \cite{GSK923295MonastrolCotreatment, GSK923295LateralAttachmentEM, LateralAttachmentSAC}. This block allows time for the establishment of the end-on kinetochore-microtubule attachment. Once all attachment is secured, the SAC is silenced and the block is lifted \cite{SACActivationAndSilencing}. Mitosis is then resumed, leading to equal segregation of chromosomes into daughter cells (see \myref{SACRole}).
 
-The SAC can be activated by a single unattached kinetochore, and the strength of the signaling activity increases with the number of signaling kinetochores in mammalian cells \cite{RiederNormalProgression, Rheostat, Ablation}. The SAC in mammalian cells relies on the kinetochore-localized signaling scaffold \protein{Knl1} as well as the corona \cite{GSK923295LateralAttachmentEM, LateralAttachmentSAC, CoronaActivatesSAC}. We refer to them as the core pathway (which will be the main focus of my thesis; see \myref{CoreSAC}) and the corona pathway, respectively \cite{100nMNoc, eSAC}.
+The SAC can be activated by a single unattached kinetochore, and the strength of the signaling activity is positively correlated with the number of signaling kinetochores in mammalian cells \cite{RiederNormalProgression, Rheostat, Ablation}. The SAC in mammalian cells relies on the kinetochore-localized signaling scaffold \protein{Knl1} as well as the corona \cite{GSK923295LateralAttachmentEM, LateralAttachmentSAC, CoronaActivatesSAC}. We refer to them as the core pathway (which will be the main focus of my thesis; see \myref{CoreSAC}) and the corona pathway, respectively \cite{100nMNoc, eSAC}.
 
 \begin{figure}
     \centering
@@ -67,7 +67,7 @@ In the corona pathway of the SAC signaling, the corona recruits the \protein{Mad
 % responsiveness (releasing the block promptly once all attachment is secured)
 % How the number of signaling kinetochores changes the strength of the signaling output is not fully understood. This knowledge will help us comprehend how the SAC prevents premature anaphase onset in the presence of a decreasing number of signaling kinetochores from the nuclear envelope breakdown to the metaphase during normal mitotic progression.
 
-\section{Cooperativity and ultrasensitivity}
+\section{Cooperativity is one way to realize ultrasensitivity}
 
 Originally, ``cooperativity'' was used to described the binding of oxygen molecules to the multi-subunit hemoglobin \cite{KNF, MWC}. Cooperativity may amplify the signal or at least sensitize the output by reducing the dampening effect of any changes in the input \cite{CooperativityQA}. To explain such dampening effect, suppose that the output $f(x) \geq 0$ is a monotonically increasing and strictly concave function of the input $x$ for all $x \geq 0$ (like the Langmuir adsorption equation or the Michaelis-Menten kinetics) and that the output is 0 if and only if the input is 0. Comparing the outputs [$f(x_2)$ and $f(x_1)$] corresponding to the inputs ($x_2 > x_1 > 0$), we have
 
@@ -81,6 +81,8 @@ There are many well-studied mechanisms (including cooperativity) deployed by sig
 
 \section{Methods of studying the SAC quantitatively \Latin{in vivo} and technical challenges}
 % The understanding of the entire picture is hindered by multiple difficulties. First, the biochemical reactions that lead to MCC formation are spatially localized within the nanoscale volume of a kinetochore. Second, the concentrations of many SAC proteins are tightly regulated and may be influenced by each other. Third, that the biochemical cascade involves complex parallel recruitment pathways of certain SAC proteins and regulating kinases/phosphatases. 
+
+% refer to sections and chapters!
 
 %To study the quantitative relationship between the strength of the SAC signaling and the number of signaling kinetochores/the amount of SAC proteins localized to signaling kinetochores, The SAC was then activated by treating the cells with either GSK923295 or a high dosage of nocodazole. GSK923295 inhibits the ATPase activity of \protein{Cenp-E}, thereby disrupting chromosome congression and yielding small numbers of chromosomes near spindle poles in mammalian cells \cite{GSK923295}.
 % when applied at 75 nM -- 236 nM used in this study
