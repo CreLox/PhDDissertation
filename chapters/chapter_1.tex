@@ -1,13 +1,13 @@
 \chapter{Introduction}
 \label{chpt:introduction}
 
-% Accurate chromosome segregation during cell division requires that the sister kinetochores on each replicated chromosome are stably attached to microtubules emanating from opposite spindle poles before the cell divides. If one or more kinetochores fail to attach to microtubules, they activate a biochemical signaling cascade known as the spindle assembly checkpoint (SAC). This cascade produces an anaphase-inhibitory signal known as the ‘‘mitotic checkpoint complex’’ (MCC). MCC inhibits the anaphase promoting complex/cyclosome (APC/C) to prevent the cell from transitioning from prometaphase to anaphase, thus avoiding chromosome mis-segregation.
+Somatic cell division generates two genetically identical daughter cells from a single parent cell. Among different stages of the cell cycle, my thesis focus on mitosis. Mitosis follows the conclusion of the interphase (during which nuclear DNAs are duplicated) and can be further divided into the prophase, the prometaphase (after the nuclear envelop breakdown and before all chromosomes are aligned at the metaphase plate, which is the main stage of my thesis), the metaphase, the anaphase, and the telophase \cite{MBC4}.
 
-% Question I want to address through my thesis research: how the SAC blocks the progression of mitosis in the presence of a single unattached kinetochore and releases the block promptly once all attachment is secured remains unclear. Here, I summarize our discovery that the SAC exploits cooperativity to achieve such sensitivity. Furthermore, I look into potential molecular mechanisms of this cooperativity.
+To generate two genetically identical daughter cells, duplicated nuclear DNAs packed within chromosomes need to be distributed into the two daughter cells equally. This requires that each duplicated chromosome is stably attached to spindle microtubules emanating from the two opposite poles of the parent cell before the parent cell divides. The spindle assembly checkpoint (SAC) serves as a surveillance mechanism that monitors the completion of this process and prevents the premature onset of the anaphase, thereby avoiding chromosome missegregation \cite{MBC4}.
 
-\section{Mitosis, spindle, kinetochore, and kinetochore-microtubule attachment}
+The SAC can robustly delay the onset of the anaphase in the presence of a single chromosome with monopolar attachment \cite{PtK1SingleUnattachedKT}. The question I want to address through my thesis research is how the SAC achieves such sensitivity. Through my extensive studies, I discovered that the SAC exploits cooperativity to achieve such sensitivity. In this chapter, some of the basic facts, important concepts, and motivations of my thesis research will be introduced to prepare my dear readers for later chapters.
 
-Somatic cell division generates two genetically identical daughter cells from a single parent cell. Among different stages of the cell cycle, my thesis will focus on mitosis, which follows the conclusion of the interphase (during which nuclear DNAs are duplicated) and can be further divided into the prophase, the prometaphase (after the nuclear envelop breakdown and before all chromosomes are aligned at the metaphase plate; see the first two cells on the left in \myref{SACRole}), the metaphase, the anaphase, and the telophase \cite{MBC4}.
+\section{Spindle, kinetochore, and kinetochore-microtubule attachment}
 
 To prepare for the equal distribution of duplicated nuclear DNAs packed within chromosomes, a mitotic cell forms the spindle (see the green structure in \myref{SACRole}) whose microtubules attach to chromosomes from opposite poles of the cell. The adaptor structures on chromosomes which mediate such attachment are named kinetochores. After all chromosomes are bipolarly attached to the spindle and aligned at the metaphase plate (through a process named ``chromosome congression'' \cite{ChromosomeCongression}), the cell will enter the anaphase when sister chromatids separate from each other. The spindle will then pull the two sets of chromosomes towards opposite poles of the cell, which later become parts of the two daughter cells \cite{MBC4}.
 
@@ -17,13 +17,11 @@ Around a kinetochore in human cells, a crescent-shaped fibrous meshwork named th
 
 % Due to the facts that mammalian kinetochore may bind to more than one microtubules during the metaphase and that there are two spindle poles from which the kinetochore microtubules may emanate, even if the end-on kinetochore-microtubule attachment has been fully established, it could still be erroneous. These undesired attachment modes are named syntelic and merotelic attachment. In syntelic attachment, both kinetochores on a duplicated chromosome attach to microtubules emanating from the same spindle pole. In merotelic attachment, a single kinetochore form attachment to microtubules emanating from both spindle poles. Cells deploy error-correction mechanisms to correct these erroneous attachment modes.
 
-% \protein{BubR1} binds to the phosphatase \protein{PP2A-B56}, which stabilizes the kinetochore-microtubule attachment.
-
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{chapters/figures/SACRole.pdf}
-    \caption{\textbf{The gradual establishment of kinetochore-spindle microtubule attachment and the role of the spindle assembly checkpoint (SAC) in ensuring equal chromosome segregation.}}
-    \noindent\justifying In an ordinary human somatic cell during mitosis, 46 chromosomes gradually attach to the spindle during the prometaphase. Kinetochores without end-on microtubule attachment activate the SAC to prevent premature anaphase onset, ensuring equal distribution of chromosomes into daughter cells. The sensitivity of the SAC is unlikely to be facilitated by an enzymatic amplification cascade, given our current understanding of the biochemical pathway of the SAC \cite{InhibitorUltrasensitivity, Caspase}. Transcriptional regulations that amplify signals via the central dogma and potential oligomerization of the involved transcriptional factors \cite{TFMultimerization} are also unlikely because the genome is highly condensed during the prometaphase.
+    \includegraphics[width=0.95\textwidth]{chapters/figures/SACRole.pdf}
+    \caption{\textbf{The gradual establishment of kinetochore-spindle microtubule attachment, the role of the spindle assembly checkpoint (SAC) in ensuring equal chromosome segregation, and the sensitivity of the SAC.}}
+    \noindent\justifying In an ordinary human somatic cell during mitosis, 46 chromosomes gradually attach to the spindle during the prometaphase. Kinetochores without end-on microtubule attachment activate the SAC to prevent premature anaphase onset, ensuring equal distribution of chromosomes into daughter cells. Many well-characterized signal amplification mechanisms do not apply to the SAC (see the discussions in \myref{Sensitivity}).
     \label{SACRole}
 \end{figure}
 
@@ -41,43 +39,21 @@ The SAC can be activated by a single unattached kinetochore, and the strength of
     \label{CoreSAC}
 \end{figure}
 
-\protein{Knl1} possesses multiple consensus MELT motifs \cite{MELTEvolution}, which are phosphorylated at signaling kinetochores \cite{MPS1-KNL1_London2012, MPS1-KNL1_Shepperd2012, MPS1-KNL1_Yamagishi2012, MPS1Localization_Ji, MPS1Localization_Hiruma}. Phosphorylated MELT motifs initiate the core SAC signaling pathway by recruiting SAC proteins like \protein{Bub3}, \protein{Bub1}, \protein{BubR1}, \protein{Cdc20}, and the \protein{Mad1}-\protein{Mad2} heterotetramer, thereby promoting the assembly of the mitotic checkpoint complex (MCC) consisting of \protein{BubR1}/\protein{BubR1}-\protein{Bub3} and \protein{Cdc20}-\protein{Mad2} \cite{RecombinantKNL1, MELTActivity, BubBiochem, BubR1TwoPools, BUB1CD1-MAD1CStructure, Faesen2017, BUB1-CDC20-MAD1, Tripartite, SpMCC}. The mitotic checkpoint complex inhibits the E3 ubiquitin ligase anaphase-promoting complex/cyclosome (APC/C) \cite{APC-MCC_Alfieri2016, APC-MCC_Yamaguchi2016}. APC/C ubiquitinates Cyclin B1, a key mitosis regulator, thereby targeting it for proteasome-mediated degradation \cite{CyclinB1Degradation_Clute+Pines1999, CyclinB1Degradation_Chang2003, SeparaseStructure}. Through the inhibition of the APC/C, the degradation of Cyclin B1 is suppressed and the onset of anaphase is delayed.
+Human \protein{Knl1} possesses 19 putative consensus MELT motifs \cite{MELTEvolution}, some of which are phosphorylated at signaling kinetochores \cite{MPS1-KNL1_London2012, MPS1-KNL1_Shepperd2012, MPS1-KNL1_Yamagishi2012, MPS1Localization_Ji, MPS1Localization_Hiruma}. Phosphorylated MELT motifs initiate the core SAC signaling pathway by recruiting SAC proteins like \protein{Bub3}, \protein{Bub1}, \protein{BubR1}, \protein{Cdc20}, and the \protein{Mad1}-\protein{Mad2} heterotetramer, thereby promoting the assembly of the mitotic checkpoint complex (MCC) consisting of \protein{BubR1}/\protein{BubR1}-\protein{Bub3} and \protein{Cdc20}-\protein{Mad2} \cite{RecombinantKNL1, MELTActivity, BubBiochem, BubR1TwoPools, BUB1CD1-MAD1CStructure, Faesen2017, BUB1-CDC20-MAD1, Tripartite, SpMCC}. The mitotic checkpoint complex inhibits the E3 ubiquitin ligase anaphase-promoting complex/cyclosome (APC/C) \cite{APC-MCC_Alfieri2016, APC-MCC_Yamaguchi2016}. APC/C ubiquitinates Cyclin B1, a key mitosis regulator, thereby targeting it for proteasome-mediated degradation \cite{CyclinB1Degradation_Clute+Pines1999, CyclinB1Degradation_Chang2003, SeparaseStructure}. Through the inhibition of the APC/C, the degradation of Cyclin B1 is suppressed and the onset of anaphase is delayed.
 
 In the corona pathway of the SAC signaling, the corona recruits the \protein{Mad1}-\protein{Mad2} heterotetramer to signaling kinetochores and promotes the SAC signaling activity \cite{CoronaActivatesSAC}. It should be noted that the core pathway and the corona pathway are not independent in human cells. Corona constituents \protein{Cenp-E} and \protein{Cenp-F} interact with core SAC pathway components \protein{BubR1} and \protein{Bub1}, respectively \cite{CENPELocalization-BUBR1, CENP-FLimitsStripping}. It has also been suggested that the recruitment of \protein{Mad1} to signaling kinetochores may be cooperative, facilitated by both the corona and \protein{Bub1} \cite{MIS12-CEP57-MAD1-MAD2, siROD_Zhang2019}. We conceptually separate the two pathways because the corona does not exist in the budding yeast, while the core pathway is conserved from yeast to human \cite{YeastNoRZZ}.
 
-\section{MELT motifs and their arrangement in human \protein{Knl1}}
-
-% Alternative splicing is common in intrinsically disordered regions mediating protein-protein interactions \cite{DisorderedRegionsAlternativeSplicing}. However, in many mammals, all of Knl1's MELT motifs within a single exon which is one of the longest internal exons in these mammals (\myref{ExonLength}). No alternatively splicing has been recorded for this region. The splicing machinery has to deploy specific mechanisms to splice long exons like this correctly \cite{InternalExon}.
-
-\begin{table}[H]
-    \renewcommand{\arraystretch}{1.5}
-    \caption{\textbf{The exon encoding all MELT motifs in \protein{Knl1} ranks among the top 0.03\% by length among all curated internal exons in humans and mice.}}
-    \noindent\justifying All putative MELT motifs identified in \cite{MELTEvolution} reside within a single exon and all recorded alternative splice variants of \protein{Knl1} contain this exon in listed mammals. Coordinates of exons (of mouse and human) in the CCDS database \cite{CCDS} were accessed on May 21, 2020. Exons from coding sequences with either a ``Public'' or a ``Reviewed, update pending'' status were pooled. Redundant entries were removed (because various coding sequences may share a common exon) and the ranking of the MELT motif-encompassing exon was calculated. Due to the lack of data for untranslated regions, only internal exons were included in the analysis. It should be noted that the maximum length of an exon is restricted by the length of the respective protein, and \protein{KNL1} is a long protein of \SI{2342}{} amino acids (the canonical isoform). In a non-canonical isoform of human \protein{Knl1}, this MELT motif-encompassing exon is 166 bases shorter but still includes all 19 putative MELT motifs.
-    \label{ExonLength}
-    \begin{center}
-        \begin{tabular}{c c c}
-            \hline
-            Species & Exon length (bases) & Ranking among all curated internal exons\\
-            \hline
-            Human & 5001 & $99.973\%$\\
-            Mouse & 4497 & $99.975\%$\\
-            Rat & 3439 & N/A\\
-            Cattle & 4020 & N/A\\
-            Elephant & 4023 & N/A\\ % What kind of elephant?
-            Giant panda & 4017 & N/A\\
-            Dog & 3837 & N/A\\
-            Bonobo & 3927 & N/A\\
-            \hline
-        \end{tabular}
-    \end{center}
-\end{table}
-
 \section{The sensitivity and responsiveness of the SAC}
+\label{Sensitivity}
+% Just like one will not completely understand how a machine works just by knowing all the gears involved, we cannot claim to have completely comprehended how the SAC works by just knowing all associated biochemical reactions individually. How the number of signaling kinetochores changes the strength of the signaling output is not fully understood.
 
-% Just like one will not completely understand how a machine works just by knowing all the gears involved, we cannot claim to have completely comprehended how the SAC works by just knowing all associated biochemical reactions individually.
-% the sensitivity of the SAC
+% sensitivity
+
 % responsiveness (releasing the block promptly once all attachment is secured)
-% How the number of signaling kinetochores changes the strength of the signaling output is not fully understood. This knowledge will help us comprehend how the SAC prevents premature anaphase onset in the presence of a decreasing number of signaling kinetochores from the nuclear envelope breakdown to the metaphase during normal mitotic progression.
+
+% amplification vs ultrasensitivity: The smallest molecule in the core SAC signaling pathway (other than the ATP required in phosphorylation reactions; see \myref{CoreSAC}) is \protein{Mad2}. Although \protein{Mad2} regulates mitosis independently of the MCC by binding to other proteins (\cite{Separase-SGO2-MAD2, KIF20A-MAD2}), its canonical isoform (with a molecular weight of \SI{23.5}{kDa}) is still much larger than typical second messengers. No enzymatic amplification cascade has been identified that may amplify the SAC activity in the presence of a single signaling kinetochore. Transcriptional regulations that amplify signals via the central dogma or realize ultrasensitivity through the potential oligomerization of transcriptional factors \cite{TFMultimerization} are also unlikely because the genome is highly condensed during the prometaphase.
+
+% Understanding the origin of the sensitivity and responsiveness of the SAC will help us comprehend how the SAC prevents premature anaphase onset in the presence of a decreasing number of signaling kinetochores from the nuclear envelope breakdown to the metaphase during normal mitotic progression.
 
 \section{Cooperativity is one way to realize ultrasensitivity}
 
@@ -89,17 +65,23 @@ Originally, ``cooperativity'' was used to describe the binding of oxygen molecul
 
 \noindent which states that the contrast between the outputs is less than the contrast between the inputs \cite{InhibitorUltrasensitivity}. Due to the wide applicability of the Langmuir adsorption equation or the Michaelis-Menten kinetics in biochemical interactions or reactions, the dampening effect may be very common.
 
-There are many well-studied mechanisms (including cooperativity) deployed by signaling cascades exhibiting a switch-like sigmoidal dose-response relationship (ultrasensitivity) to circumvent the dampening effect. Regarding the SAC signaling, certain mechanisms (like the cascade amplification mechanism; see \myref{SACRole}) may be excluded based on our current understanding of mitosis and the biochemical pathway of the SAC, while the multi-step/multi-site phosphorylation mechanism has been implied in the SAC by experimental evidence \cite{MultistepUltrasensitivity, Ji2017eLife} (see the magenta arrows and texts in \myref{CoreSAC}). My thesis will focus on the implied role of cooperativity in the SAC signaling. The term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'') describes the phenomenological synergy which I attribute to the increased local concentration of SAC proteins due to their co-localization on the same signaling scaffold (see my models in \myref{ProzoneEffectModel,FinalKnittingModel}). This is reminiscent of the theoretical explanation of the avidity between antibodies and antigens \cite{AvidityMath}, another well-characterized example of cooperativity.
+There are many well-studied mechanisms (including cooperativity) deployed by signaling cascades exhibiting a switch-like sigmoidal dose-response relationship (ultrasensitivity) to circumvent the dampening effect. For example, the multi-step/multi-site phosphorylation mechanism has been implied in the SAC by experimental evidence \cite{MultistepUltrasensitivity, Ji2017eLife} (see the magenta arrows and texts in \myref{CoreSAC}). My thesis will focus on the implied role of cooperativity in the SAC signaling. The term ``positive cooperativity'' (henceforth simply referred to as ``cooperativity'') describes the phenomenological synergy which I attribute to the increased local concentration of SAC proteins due to their co-localization on the same signaling scaffold (see my models in \myref{ProzoneEffectModel,FinalKnittingModel}). This is reminiscent of the theoretical explanation of the avidity between antibodies and antigens \cite{AvidityMath}, another well-characterized example of cooperativity.
+
+% Regarding the SAC signaling, certain mechanisms (like the cascade amplification mechanism; see \myref{SACRole}) may be excluded based on our current understanding of mitosis and the biochemical pathway of the SAC, while
 
 \section{Studying the SAC quantitatively \Latin{in vivo}: experimental methods and technical challenges}
+\label{TechnicalChallenges}
+
 % The understanding of the entire picture is hindered by multiple difficulties. First, the biochemical reactions that lead to MCC formation are spatially localized within the nanoscale volume of a kinetochore. Second, the concentrations of many SAC proteins are tightly regulated and may be influenced by each other. Third, that the biochemical cascade involves complex parallel recruitment pathways of certain SAC proteins and regulating kinases/phosphatases. 
 
 % refer to sections and chapters!
 
 %To study the quantitative relationship between the strength of the SAC signaling and the number of signaling kinetochores/the amount of SAC proteins localized to signaling kinetochores, The SAC was then activated by treating the cells with either GSK923295 or a high dosage of nocodazole. GSK923295 inhibits the ATPase activity of \protein{Cenp-E}, thereby disrupting chromosome congression and yielding small numbers of chromosomes near spindle poles in mammalian cells \cite{GSK923295}.
-% when applied at 75 nM -- 236 nM used in this study
+
 %These polar chromosomes typically possess one kinetochore that is unattached or laterally attached to spindle microtubules, both of which activate the SAC in mammalian cells \cite{GSK923295MonastrolCotreatment,GSK923295LateralAttachmentEM,LateralAttachmentSAC}.
+
 % Monastrol co-treatment may have created the bias towards unattachment instead of lateral attachment.
+
 %Nocodazole affects the dynamics of microtubules and distorts spindles at \SI{330}{nM} in human cells \cite{TypeIIISpindle_330nMNoc, RPE1+Noc}, turning on SAC signaling at almost all kinetochores based on the recruitment of SAC proteins (see below). We applied various fluorescence microscopy and spectroscopy techniques to quantify SAC proteins and their influence on the SAC in live cells \cite{eSAC}. % Small numbers of signaling kinetochores and relative enrichment of SAC proteins on them.
 
 %This chromosome congression-promoting function complicates the quantitative study of the SAC signaling output in live cells.
