@@ -158,7 +158,7 @@
 % \RequirePackage{times}
 
 % Compress multiple citations
-\RequirePackage{natbib}
+\RequirePackage[sort]{natbib}
 %\usepackage[backend=biber,sortcites,sorting=none,uniquename=false]{biblatex}
 %\addbibresource{references.bib}
 
