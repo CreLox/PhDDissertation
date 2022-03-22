@@ -1,14 +1,8 @@
-\section{The primary sequence of \protein{Mad1}'s loop region is not conserved but the secondary structure is}
-% To understand which model is correct/design an experiment to prove which hypothesis is correct in a more direct way (or at least from a different angle), we need to understand the structure of MAD1 first.
-% The algorithm originally proposed in \cite{LupasCOILS} predict regions of discontinuity within coiled-coil structures.
+\section{The \protein{Mad1}-\protein{Mad2} heterotetramer may adopt a fold-back conformation both \Latin{in vivo} and \Latin{in vitro}}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{chapters/figures/MAD1_MIM-RLK_Lupas+DeepCoil2.pdf}
-    \caption{\textbf{The secondary structure of \protein{Mad1}'s loop is conserved.}}
-    \noindent\justifying The figure shows coiled coil predictions by two algorithms (black curves: Lupas' method using a gliding window size of 28 residues \cite{LupasCOILS}; blue curves: raw predicted probabilities by DeepCoil2 \cite{DeepCoil}) on the region spanning from \protein{Mad1}'s MIM (which is also not a coiled coil \cite{Structure1GO4}) to \protein{Mad1}'s consensus RLK motif from \Latin{Homo sapiens} (human), \Latin{Danio rerio} (zebrafish), \Latin{Xenopus Laevis} (African clawed frog), \Latin{Saccharomyces cerevisiae} (budding yeast), and \Latin{Schizosaccharomyces pombe} (fission yeast). The $x$-axis represents the coordinates of residues within \protein{Mad1}. The primary sequences of full-length \protein{Mad1} proteins were supplied as the input, but only probability predictions on this region are shown here. The RLK motif directly binds to \protein{Bub1} \cite{Ji2017eLife, MAD1CStructure} and is located within the coiled coil leading to the RWD domain (see the crystal structure on the right in \myref{HsMAD1CTerStructure}). Residues within the putative loop region are colored as in \myref{HsMAD1CTerStructure}.
-    \label{MAD1_MIM-RLK_Lupas+DeepCoil2}
-\end{figure}
+For the ``knitting'' model to work, the cell need to position the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM close enough. According to the crystal structure, the axial length from the MIM to the start of the loop region is about 5--\SI{6}{nm} while the axial length from the end of the loop region to the anchoring point of \protein{Cdc20} is about \SI{7}{nm} \cite{TemplateModel, Ji2017eLife, BUB1-CDC20-MAD1, Structure1GO4, Structure4DZO}. However, if we model the disordered N-termnius of \protein{Cdc20} as a simple 3-D random walk, we can estimate the root-mean-square distance from \protein{Cdc20}'s BOX1 to its MIM (about 90 residues) to be roughly \SI{4}{nm}. Due to steric hinderance and restrictions imposed by the Ramachandran plot, such a simple 3-D random walk model is far from realistic. However, this estimation illustrates that the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM may not be close enough for the engagement between \protein{Mad2} and \protein{Cdc20}, which requires a proper examination.
+
+% sironi and Heinrich
 
 \section{\protein{Mad1}'s loop region is important to the SAC signaling activity \Latin{in vivo}}
 \label{LoopDeletionSection}
