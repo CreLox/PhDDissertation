@@ -1,8 +1,14 @@
 \section{The \protein{Mad1}-\protein{Mad2} heterotetramer may adopt a fold-back conformation both \Latin{in vivo} and \Latin{in vitro}}
 
-For the ``knitting'' model to work, the cell need to position the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM close enough. According to the crystal structure, the axial length from the MIM to the start of the loop region is about 5--\SI{6}{nm} while the axial length from the end of the loop region to the anchoring point of \protein{Cdc20} is about \SI{7}{nm} \cite{TemplateModel, Ji2017eLife, BUB1-CDC20-MAD1, Structure1GO4, Structure4DZO}. However, if we model the disordered N-termnius of \protein{Cdc20} as a simple 3-D random walk, we can estimate the root-mean-square distance from \protein{Cdc20}'s BOX1 to its MIM (about 90 residues) to be roughly \SI{4}{nm}. Due to steric hinderance and restrictions imposed by the Ramachandran plot, such a simple 3-D random walk model is far from realistic. However, this estimation illustrates that the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM may not be close enough for the engagement between \protein{Mad2} and \protein{Cdc20}, which requires a proper examination.
+For the ``knitting'' model to work, the cell need to position the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM close enough. According to the crystal structure, the axial length from the MIM to the start of the loop region is about 5--\SI{6}{nm} while the axial length from the end of the loop region to the anchoring point of \protein{Cdc20} is about \SI{7}{nm} \cite{TemplateModel, Ji2017eLife, BUB1-CDC20-MAD1, Structure1GO4, Structure4DZO}. In contrast, if we model the disordered N-termnius of \protein{Cdc20} as a simple 3-D random walk, we can estimate the root-mean-square distance from \protein{Cdc20}'s BOX1 to its MIM (about 90 residues) to be less than \SI{4}{nm}. Due to steric hinderance and restrictions imposed by the Ramachandran plot, such a simple 3-D random walk model is far from realistic. However, even if we apply a more sophisticated worm-like chain model with a persistence length of 3--\SI{4}{\angstrom} \cite{RandomWalk3D-WormLikeChain}, the root-mean-square distance from \protein{Cdc20}'s BOX1 to its MIM is still only about \SI{5}{nm}. These estimations illustrate that the site of \protein{Mad2}'s conformational switch and \protein{Cdc20}'s MIM may not be already close enough for the engagement between \protein{Mad2} and \protein{Cdc20}.
 
-% sironi and Heinrich
+Previous studies have suggested that \protein{Mad1} may scaffold the \protein{Cdc20}-\protein{Mad2} heterodimerization by assuming a fold-back conformation \cite{Structure1GO4, SpMad1}. As mentioned in the previous section, the secondary structure of \protein{Mad1}'s C-terminal loop region is conserved. According to the prediction by the ColabFold advanced algorithm, the C-terminus of wildtype \protein{Mad1} homodimer may indeed take a fold-back conformation (which is closer to the scenario envisioned by \cite{SpMad1} than by \cite{Structure1GO4}). % If we remove the conserved flexible loop, ...
+
+%ColabFold Prediciton figure here
+
+% in vivo evidence
+
+% in vitro evidence (just mention)
 
 \section{\protein{Mad1}'s loop region is important to the SAC signaling activity \Latin{in vivo}}
 \label{LoopDeletionSection}
