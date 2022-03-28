@@ -165,7 +165,51 @@ The two siRNAs targeting the 3'-UTR of \gene{Mad1} were from \cite{siMAD1-3UTR}.
 
 Similar to \myref{FCSMethods}, all FLIM data were collected on an Alba v5 Laser Scanning Microscope, connected to an Olympus IX81 inverted microscope main body [equipped with a UPLSAPO60XW objective (1.2 NA)]. A Fianium WL-SC-400-8 laser with an acousto-optic tunable filter was used to generate excitation pulses at a wavelength of \SI{488}{nm} and a frequency of about \SI{20}{MHz}. Excitation light was further filtered by a Z405/488/561/635rpc quadband dichroic mirror. The emission light of the green channel was redirected by a 562 longpass dichroic mirror (FF562-Di03, Semrock), filtered by an FF01-531/40-25 filter, and finally detected by an SPCM-AQRH-15 avalanche photodiode. The time-correlated single photon counting module to register detected photon events to excitation pulses was SPC-830. Data acquisition was facilitated by VistaVision.
 
-The instrument response function of the green channel was measured using Rose Bengal (which has poor excitation efficiency at \SI{488}{nm}) freshly dissolved to \SI{1}{\micro M} in \SI{5.6}{M} KI solution \cite{RoseBengal}. The emission light was redirected by a 562 longpass dichroic mirror and filtered by an FF01-582/75-25 filter (Semrock). The data analysis pipeline developed in this study was implemented in MATLAB.
+The instrument response function of the green channel was measured using Rose Bengal (which has poor excitation efficiency at \SI{488}{nm}) freshly dissolved to \SI{1}{\micro M} in \SI{5.6}{M} KI solution \cite{RoseBengal}. The emission light was redirected by a 562 longpass dichroic mirror and filtered by an FF01-582/75-25 filter (Semrock). The data analysis pipeline (implemented in MATLAB) developed in this study is publicly available.
+
+To demonstrate how fluorescence lifetime measurements can quantify the FRET efficiency, consider donor fluorophores with a lifetime of $\tau_0$. In the absence of acceptor fluorophores, the exponential decay $D_0$ of donor fluorescence after the pulse excitation at $t = 0$ is
+
+\begin{equation*}
+    D_0(t) = C e^{-\frac{t}{\tau_0}}
+\end{equation*}
+
+\noindent and the total fluorescence is
+
+\begin{equation*}
+    S_0 = \int_0^{+\infty}D_0(t) dt = C\tau_0,
+\end{equation*}
+
+\noindent wherein $C$ is a constant determined by the excitation and detection condition, the total number and properties of fluorophores, and the imaging setup. Without altering any of these conditions, in the presence of acceptor fluorophores and FRET, the longer a donor fluorophore stays in the excited state, the higher the chance FRET may have occurred (note: this is not a rigorous statement because fluorescence emission and FRET quenching are independent stochastic processes and an excited fluorophore can only relax through one route). Suppose that the timing of FRET follows an exponential distribution with a probability density function of
+
+\begin{equation*}
+    f(t) \coloneqq \dfrac{1}{\tau'} e^{-\frac{t}{\tau'}}.
+\end{equation*}
+
+\noindent The probability that FRET does not happen before $t_0$ will be
+
+\begin{equation*}
+    P(t > t_0) = \int_{t_0}^{+\infty} f(t) dt = e^{-\frac{t_0}{\tau'}}.
+\end{equation*}
+
+\noindent Excited fluorophores can either take the FRET quenching route or the fluorescence emission route to relax to the ground state (note: a fluorophore may also relax through other ways but the fact that these routes are independent stochastic processes means that it does not affect the following conclusion). Therefore, in the presence of acceptor fluorophores and FRET, the decay $D$ of donor fluorescence becomes
+
+\begin{equation*}
+    D(t_0) =  D_0(t_0) \cdot P(t > t_0) = C e^{-\frac{t_0}{\tau_0}} \cdot e^{-\frac{t_0}{\tau'}} \coloneqq C e^{-\frac{t_0}{\tau}},
+\end{equation*}
+
+\noindent wherein
+
+\begin{equation*}
+    \tau = \dfrac{\tau_0\tau'}{\tau_0 + \tau'}.
+\end{equation*}
+
+Thus, the total fluorescence becomes $S =  C\tau$. Therefore,
+
+\begin{equation*}
+    \text{FRET efficiency} \coloneqq \frac{S_0-S}{S_0} = \frac{\tau_0-\tau}{\tau_0}.
+\end{equation*}
+
+Because the fluorescence lifetime in the absence of quenching is an intrinsic property of mature fluorophores (under a certain temperature) \cite{FLTIsIntrinsic}, the equation above greatly simplifies experiments to measure the FRET efficiency. This equation still applies even if the fluorescence decay has to be fitted by a multi-component exponential decay, as long as the fluorescence lifetime is an average weighted by the corresponding $C$ of each component.
 
 \subsection{Immunoprecipitation using mNeonGreen-Trap}
 
