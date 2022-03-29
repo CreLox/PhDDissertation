@@ -10,7 +10,15 @@ The SAC can robustly delay the onset of the anaphase in the presence of a single
 
 \section{Spindle, kinetochore, and kinetochore-microtubule attachment}
 
-To prepare for the equal distribution of duplicated nuclear DNAs packed within chromosomes, a mitotic cell forms the spindle (see the green structure in \myref{SACRole}) whose microtubules attach to chromosomes from opposite poles of the cell. The adaptor structures on chromosomes which mediate such attachment are named kinetochores. After all chromosomes are bipolarly attached to the spindle and aligned at the metaphase plate (through a process named ``chromosome congression'' \cite{ChromosomeCongression}), the cell will enter the anaphase when sister chromatids separate from each other. The spindle will then pull the two sets of chromosomes towards opposite poles of the cell, which later become parts of the two daughter cells \cite{MBC4}.
+To prepare for the equal distribution of duplicated nuclear DNAs packed within chromosomes, a mitotic cell forms the spindle (the green structure in \myref{SACRole}) whose microtubules attach to chromosomes from opposite poles of the cell. The adaptor structures on chromosomes which mediate such attachment are named kinetochores. After all chromosomes are bipolarly attached to the spindle and aligned at the metaphase plate (through a process named ``chromosome congression'' \cite{ChromosomeCongression}), the cell will enter the anaphase when sister chromatids separate from each other. The spindle will then pull the two sets of chromosomes towards opposite poles of the cell, which later become parts of the two daughter cells \cite{MBC4}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapters/figures/SACRole.pdf}
+    \caption{\textbf{The gradual establishment of kinetochore-spindle microtubule attachment and the role of the spindle assembly checkpoint (SAC) in ensuring equal chromosome segregation.}}
+    \noindent\justifying In an ordinary human somatic cell during mitosis, 46 chromosomes gradually attach to the spindle during the prometaphase. Kinetochores without end-on microtubule attachment activate the SAC to prevent premature anaphase onset, ensuring equal distribution of chromosomes into daughter cells. Diagrams of the two modes of kinetochore-microtubule attachment (lateral vs end-on) are shown on the top right. It should be noted that lateral attachment is usually observed in the early stage of the establishment of kinetochore-microtubule attachment in the prometaphase, before sister chromatids separate from each other at the onset of the anaphase normally. The cartoon shows only one chromatid with one kinetochore in each case to simply demonstrate the concept.
+    \label{SACRole}
+\end{figure}
 
 In most vertebrates, kinetochores range between 0.1--\SI{0.5}{\micro m} in diameter \cite{Rieder+Salmon1998}. The architecture of human kinetochores is proposed to resemble a Velcro-like interface, forming adaptable attachment sites for an average number of about 17 microtubules in the metaphase \cite{Wendell1993, Zaytsev2014, Zaytsev2015, Velcro, Kukreja2020}. There are two different modes of kinetochore-microtubule attachment in human cells: the lateral attachment and the end-on attachment (see \myref{SACRole}). The establishment of the kinetochore-microtubule attachment is a gradual and stochastic process \cite{GradualStochastic}.
 
@@ -22,15 +30,8 @@ In most vertebrates, kinetochores range between 0.1--\SI{0.5}{\micro m} in diame
 
 Around a kinetochore in human cells, a crescent-shaped fibrous meshwork named the corona is assembled \cite{CoronaReview_Kops+Gassman2020}. It is formed through the polymerization of the ROD-Zwilch-ZW10-Spindly (RZZS) complex \cite{RZZS_Sacristan2018, RZZS_Raisch2022} and is stripped off the kinetochore by dynein at the establishment of microtubule attachment \cite{DyneinStripsCorona}. The corona expands the microtubule-attachment interface of a kinetochore and thereby facilitates the initial microtubule capture. The corona recruits the centromere-associated kinesin \protein{Cenp-E}, which promotes the conversion of lateral attachment into the desired end-on attachment \cite{Corona-CENP-E_Yao1997, GSK923295MonastrolCotreatment, CENPEActivity-BUBR1}. The corona also recruits \protein{Cenp-F} which may contribute to the stability of the kinetochore-microtubule attachment and limits the dynein-mediated stripping of the corona \cite{CENP-FLimitsStripping}.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{chapters/figures/SACRole.pdf}
-    \caption{\textbf{The gradual establishment of kinetochore-spindle microtubule attachment and the role of the spindle assembly checkpoint (SAC) in ensuring equal chromosome segregation.}}
-    \noindent\justifying In an ordinary human somatic cell during mitosis, 46 chromosomes gradually attach to the spindle during the prometaphase. Kinetochores without end-on microtubule attachment activate the SAC to prevent premature anaphase onset, ensuring equal distribution of chromosomes into daughter cells. Diagrams of the two modes of kinetochore-microtubule attachment (lateral vs end-on) are shown on the top right.
-    \label{SACRole}
-\end{figure}
-
-\section{The spindle assembly checkpoint (SAC) signaling in human cells: the core pathway and the corona pathway}
+\section{The spindle assembly checkpoint (SAC) signaling pathway in human cells}
+%: the core pathway and the corona pathway
 \label{TwoSACPathwaysIntro}
 
 Cells deploy the spindle assembly checkpoint (SAC) to monitor the progress of the establishment of the kinetochore-microtubule attachment during the prometaphase. The SAC is activated at kinetochores without end-on microtubule attachment to block premature anaphase onset \cite{GSK923295MonastrolCotreatment, GSK923295LateralAttachmentEM, LateralAttachmentSAC}. This block allows time for the establishment of the end-on kinetochore-microtubule attachment. Once all attachment is secured, the SAC is silenced and the block is lifted \cite{SACActivationAndSilencing}. Mitosis is then resumed, heading toward equal segregation of chromosomes into daughter cells (see \myref{SACRole}).
