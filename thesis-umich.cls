@@ -1522,7 +1522,7 @@
  % Insert the list of figures.
  \if@umich@listoffigures\listoffigures\fi %
  % Insert the list of tables.
- \if@umich@listoftables\listoftables\fi %
+ % \if@umich@listoftables\listoftables\fi %
  % Insert the list of maps.
  \if@umich@listofmaps\listofmaps\fi %
  % Insert the list of illustrations.

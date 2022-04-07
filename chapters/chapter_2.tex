@@ -18,7 +18,7 @@ Because the core SAC signaling pathway is initiated by the phosphorylation of ME
     \includegraphics[width=0.77\textwidth]{chapters/figures/eSAC+Cre-lox.pdf}
     \phantomsubfiglabel{eSAC} % subfigure A
     \phantomsubfiglabel{Cre-lox} % subfigure B
-    \caption{\textbf{The design of an ectopic SAC (eSAC) activator and its stable integration into a defined genomic locus in HeLa-A12 cells.}}
+    \caption{The design of an ectopic SAC (eSAC) activator and its stable integration into a defined genomic locus in HeLa-A12 cells.}
     \noindent\justifying (A) The eSAC activator consists of a recombinant \protein{Knl1} phosphodomain and a recombinant \protein{Mps1} kinase domain. The phosphodomain is at the N-terminus of the corresponding recombinant protein while the kinase domain is at the C-terminus of the corresponding recombinant protein. (B) A diagram demonstrating Cre-\bacterialgene{lox} recombination-mediated cassette exchange (RMCE) between a transfected circular plasmid (the top part) and the genomic locus (the bottom part). This diagram is not to scale. The design was adapted from \cite{HeLa-A12_Khandelia2011, HeLa-A12_Ballister2014}. pA1: the polyadenylation signal of herpes simplex virus thymidine kinase. IRES2: (encephalomyocarditis virus) internal ribosome entry site 2. \bacterialgene{pac}: the coding sequence of puromycin \textit{N}-acetyltransferase. pA2: the polyadenylation signal of bovine growth hormone. \textit{rtTA3}: an expression cassette encoding the reverse tetracycline-controlled transactivator 3 (rtTA3), consisting of the promoter of the human ubiquitin C gene, the coding sequence of rtTA3, and a polyadenylation signal from simian virus 40. TRE: a tetracycline-responsive promoter element consisting of six tandem tetracycline operators followed by the minimal promoter sequence derived from the human cytomegalovirus immediate-early promoter. pA3: the polyadenylation signal of rabbit \textbeta{}-globin. nlCre: nucleus-localized Cre recombinase. P\textsubscript{EF-1\textalpha{}}: promoter of the human \gene{EF1A} gene. \bacterialgene{bsd}: the coding sequence of blasticidin S deaminase. After integrated into the genomic locus, the recombinant phosphodomain is under the regulation of the \gene{EF1A} promoter while the recombinant kinase domain is under the regulation of the TRE.
     \label{eSAC+Cre-lox}
 \end{figure}
@@ -36,7 +36,7 @@ Using purfied proteins, we showed that the purified recombinant \protein{Mps1} k
 \begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{chapters/figures/KinaseAssay.pdf}
-    \caption{\textbf{The purified recombinant \protein{Mps1} kinase domain can phosphorylate the purified recombinant \protein{Knl1} phosphodomain in an in vitro kinase assay.}}
+    \caption{The purified recombinant \protein{Mps1} kinase domain can phosphorylate the purified recombinant \protein{Knl1} phosphodomain in an in vitro kinase assay.}
     \noindent\justifying (A) Phosphorylation of MELT\textsuperscript{13} was only detected when the kinase, the phosphodomain, and ATP co-existed in the reaction. (B) The phosphorylation reaction still happened even without the addition of \SI{500}{nM} rapamycin, probably because the concentrations of the purified recombinant \protein{Mps1} kinase domain and the purified recombinant \protein{Knl1} phosphodomain in this in vitro assay were higher than their concentrations in eSAC-expressing HeLa-A12 cells induced by \SI{2}{\micro g/mL} of doxycycline. The reaction was strongly inhibited by \SI{1}{\micro M} reversine, an \protein{Mps1} inhibitor.
     \label{KinaseAssay}
 \end{figure}
@@ -45,7 +45,7 @@ Rapamycin (but not the vehicle DMSO) treatment resulted in metaphase arrest in e
 
 Together, these results supported that the recombinant \protein{Mps1} kinase domain phosphorylated MELT motifs of the recombinant \protein{Knl1} phosphodomain in the presence of rapamycin, which then recruits SAC proteins (like \protein{Bub3} and \protein{Bub1}) and delays anaphase onset in cells.
 
-\section{Building a semi-automatic image analysis pipeline to enable the processing of large data sets from a mitotic duration assay}
+\section{Building a semi-automatic image analysis pipeline to enable the processing of large data sets from mitotic duration assays}
 \label{IncuCyteAnalysis}
 
 For mitotic duration assays requiring live-cell time-lapse imaging, I developed a semi-automatic pipeline [implemented in MATLAB (MathWorks)] to facilitate data analysis (\myref{DataAnalysisPipeline}). Images of fluorescence channel(s) were first pre-processed to remove backgrounds and corrected for shading (due to spherical aberration of the objective, non-homogenous reflection of light at various interfaces or by the wall of the well, \Latin{etc.}). The background was obtained from a blank well containing only the imaging media. The shading pattern was calculated from a blank well containing the imaging media supplied with a purified fluorescence protein corresponding to the fluorescence channel (see \myref{RecombinantMPS1KDPurification,M3Purification}). We currently use the following equation to correct for the background and shading (on a pixel-by-pixel basis):
@@ -61,7 +61,7 @@ Adherent mammalian cells typically (though not always \cite{Syntelic+Merotelic})
 \begin{figure}
     \centering
     \includegraphics[width=0.95\textwidth]{chapters/figures/DataAnalysisPipeline.pdf}
-    \caption{\textbf{The semi-automatic data analysis pipeline for mitotic duration assays.}}
+    \caption{The semi-automatic data analysis pipeline for mitotic duration assays.}
     \noindent \justifying The phase-contrast image shown here is not a real image (but the exemplary kernel is one of the kernels that were used in this study). Real phase-contrast images are complicated by nearby or underlying interphase/prophase cells, dead cells that might also have a similar halo, and irregularity in the shape and size of the mitotic cells. Large displacement of a mitotic cell and local crowdedness may also be problematic to automatic tracking. Therefore, manual examination and correction of all identified mitotic events are necessary.
     \label{DataAnalysisPipeline}
 \end{figure}
@@ -69,7 +69,7 @@ Adherent mammalian cells typically (though not always \cite{Syntelic+Merotelic})
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapters/figures/CancelIXNAnalysisObserverBias.pdf}
-    \caption{\textbf{The observer bias in the data analysis of the mitotic duration assay can be eliminated by extending the duration of the time-lapse imaging and setting a cut-off line to filter out cells whose NEBD timing is too late.}}
+    \caption{The observer bias in the data analysis of the mitotic duration assay can be eliminated by extending the duration of the time-lapse imaging and setting a cut-off line to filter out cells whose NEBD timing is too late.}
     \noindent \justifying In this simple example, we have two types of cells. One of them arrests in mitosis for a shorter duration while the other arrests in mitosis for longer. The ratio between the total numbers of the two types of cells is $1 : 1$ and the NEBD timing is independent of the duration from the NEBD to the onset of anaphase. If no anti-bias measure is taken (as illustrated in the top panel), the observed ratio between the two will be distorted ($2 : 1$). However, if we set a cut-off line to filter out cells whose NEBD timing is too late (as illustrated in the bottom panel), the observed ratio will be restored to $1 : 1$, faithful to the true ratio. As long as the margin from the cut-off line to the end of imaging is longer than the mitotic duration of most cells, this bias should be mostly eliminated.
     \label{CancelIXNAnalysisObserverBias}
 \end{figure}
@@ -89,7 +89,7 @@ The ability of the eSAC activator to hijack the endogenous SAC signaling pathway
     \phantomsubfiglabel{M4_DoseResponse} % subfigure D
     \phantomsubfiglabel{M6_DoseResponse} % subfigure E
     \phantomsubfiglabel{Summary_DoseResponse} % subfigure F
-    \caption{\textbf{A summary of the dose-response curves for the five eSAC activators with recombinant phosphodomains containing one to six MELT motifs.}}
+    \caption{A summary of the dose-response curves for the five eSAC activators with recombinant phosphodomains containing one to six MELT motifs.}
     \noindent\justifying The dose (red fluorescence readout of the recombinant \protein{Mps1} kinase domain at the beginning of prometaphase in the cytosol of each cell) versus response (time in mitosis from the NEBD to the onset of the anaphase, which is simply referred to as ``time in mitosis'' in the follwing context) relationship for different eSAC activators [(A) M1, (B) M2, (C) M3, (D) M4, and (E) M6 (M3-M3)]. Each gray dot represents a cell. Data from at least two independent experiments were compiled with more than \SI{2500}{} cells analyzed in each group. There may be some outliers beyond the range of the $x$- or $y$-axis (but they are included in the fitting). Bins of raw data (open squares, representing means $\pm$ SEMs) are overlaid. (F) shows a summary of the fitted dose-response curves for the five eSAC activators with recombinant phosphodomains containing one to six MELT motifs. Data from M1, M2, M3, and M4 are fitted to a Hill equation (see the main text) while LOESS (locally estimated scatterplot smoothing) was applied to show the trend of M6 (M3-M3). This figure is compiled and adapted from Figures 3C, 3E, 3F, 3G, 4B, and 4C of \cite{eSAC}. Dr. Ajit Joglekar, Adrienne Fontan, and Lauren Humphrey-Stark also contributed to setting up the experiments and/or performing data analysis. AU: arbitrary unit.
     \label{DoseResponse}
 \end{figure}
@@ -111,7 +111,7 @@ There are two major differences among the eSAC constructs in the previous sectio
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{chapters/figures/MELTSeparationColorCodedBeeSwarmPlot.pdf}
-    \caption{\textbf{Pairwise distances between $(+1, +2, +3)$-neighboring MELT motifs in human \protein{Knl1} and the M6 (M3-M3) eSAC construct.}}
+    \caption{Pairwise distances between $(+1, +2, +3)$-neighboring MELT motifs in human \protein{Knl1} and the M6 (M3-M3) eSAC construct.}
     \noindent\justifying Each ``circle \& center'' symbol represents a pair of neighboring MELT motifs (with the circle representing one MELT motif and the center representing the other). There are a total number of 19 putative MELT motifs in human \protein{Knl1} and 6 MELT motifs in the signaling scaffold of the M6 (M3-M3) eSAC construct. Therefore, we have a total number of $(18, 17, 16)$ pairs and $(5, 4, 3)$ pairs of $(+1, +2, +3)$-neighboring MELT motifs in human \protein{Knl1} and the signaling scaffold of the M6 (M3-M3) eSAC construct, respectively. The coloring scheme follows the one in Figure 1D of \cite{MELTActivity}, which estimated the signaling activity of corresponding MELT motifs based on their capability to recruit \protein{Bub1} (green: ``high'', yellow: ``intermediate'', red: ``low''). Distances in this chapter are measured between the threonine/serine residues of the consensus ``MELT'' sequences.
     \label{PairwiseDistancesBetweenNeighboringMELTs}
 \end{figure}
@@ -121,7 +121,7 @@ To study the effect of the distance between adjacent MELT motifs in the signalin
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{chapters/figures/DistanceEffect.pdf}
-    \caption{\textbf{The distance between MELT motifs has a minor impact on the SAC activity.}}
+    \caption{The distance between MELT motifs has a minor impact on the SAC activity.}
     \noindent\justifying (A) The distance between the two MELT\textsuperscript{12} motifs in the three constructs are 135, 223, and 311 amino acids, respectively. The distance between the first motif and the last MELT motif in the M6 (M3-M3) construct in the previous section is 296 amino acids. (B-E) A summary (E) of eSAC activities of MELT\textsuperscript{12}-$1\times$linker-MELT\textsuperscript{12} (B), MELT\textsuperscript{12}-$2\times$linker-MELT\textsuperscript{12} (C), and MELT\textsuperscript{12}-$3\times$linker-MELT\textsuperscript{12} (D) as the signaling scaffold. Each gray dot represents a cell. There may be some outliers beyond the range of the $x$- or $y$-axis (but they are included in the fitting).  (F) Comparison of the plateau levels of SAC response curves of the three eSAC constructs. Only cells with [eSAC activator] $> 10$ AUs are included. Data of more than 500 cells from two independent experiments were pooled for each group. %The average mitotic durations are $(122.3 \pm 3.4)$, $(119.1 \pm 4.4)$, and $(108.1 \pm 5.7)$ minutes.
     The mean value $\pm$ the 95\% confidence interval of each group is overlaid. Unpaired $t$-tests with Welch's correction were performed in Prism 9 (GraphPad Software). Throughout my thesis, the following symbols for $p$-values are used: ns (not significant, $p \geq 0.05$), ${\ast}$ ($0.01 \leq p < 0.05$), ${\ast}{\ast}$ ($0.001 \leq p < 0.01$), ${\ast}{\ast}{\ast}$ ($0.0001 \leq p < 0.001$), and ${\ast}{\ast}{\ast}{\ast}$ ($p < 0.0001$).
     \label{DistanceEffect}
@@ -152,7 +152,7 @@ Alternative splicing is commonly observed in intrinsically disordered regions th
 
 \begin{table}
     \renewcommand{\arraystretch}{1.5}
-    \caption{\textbf{The exon encoding all MELT motifs in \protein{Knl1} ranks among the top 0.03\% by length among all curated internal exons in humans and mice.}}
+    \caption{The exon encoding all MELT motifs in \protein{Knl1} ranks among the top 0.03\% by length among all curated internal exons in humans and mice.}
     \noindent\justifying All putative MELT motifs identified in \cite{MELTEvolution} reside within a single exon and all recorded alternative splice variants of \protein{Knl1} contain this exon in listed mammals. Coordinates of exons (of mouse and human) in the CCDS database \cite{CCDS} were accessed on May 21, 2020. Exons from coding sequences with either a ``Public'' or a ``Reviewed, update pending'' status were pooled. Redundant entries were removed (because various coding sequences may share a common exon) and the ranking of the MELT motif-encompassing exon was calculated. Due to the lack of data for untranslated regions, only internal exons were included in the analysis. It should be noted that the maximum length of an exon is restricted by the length of the respective protein, and \protein{KNL1} is a long protein of \SI{2342}{} amino acids (the canonical isoform). In a non-canonical isoform of human \protein{Knl1}, this MELT motif-encompassing exon is 166 bases shorter but still includes all 19 putative MELT motifs.
     \label{ExonLength}
     \begin{center}
