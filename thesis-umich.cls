@@ -139,8 +139,8 @@
  \setlength{\columnsep}{0.3in}
 \else
  % Use the standard margins for the thesis version.
- \RequirePackage[margin=1in,left=1in, %
-  headheight=0.5\baselineskip]{geometry}
+ %\RequirePackage[showframe,margin=1in,headheight=0.5\baselineskip]{geometry}
+ \RequirePackage[margin=1in,left=1in,headheight=0.5\baselineskip]{geometry}
 \fi
 
 % This loads the required math packages.
